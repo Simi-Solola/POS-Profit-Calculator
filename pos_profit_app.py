@@ -67,7 +67,7 @@ for label, (low, high, charge) in withdrawal_ranges.items():
 
     # Display results
     st.write(f"**{label}**")
-    st.write(f"**Max Profit (if all withdrawals are ₦{low})**: ₦{max_profit} ({max_transactions} transactions)")
+    st.write(f"**Max Profit (if all withdrawals are ₦{low})**: {max_transactions} transactions → Profit: **₦{max_profit}**")
     st.write(f"**Average Profit**: {avg_transactions} transactions → Profit: **₦{avg_profit}**")
-    st.write(f"**Min Profit (if all withdrawals are ₦{high})**: ₦{min_profit} ({min_transactions} transactions)")
+    st.write(f"**Min Profit (if all withdrawals are ₦{high})**: {min_transactions} transactions → Profit: **₦{min_profit}**")
     st.write("---")
