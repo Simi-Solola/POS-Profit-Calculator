@@ -43,19 +43,31 @@ withdrawal_ranges = {
     "₦41,000 - ₦50,000": (41000, 50000, 600)
 }
 
+# # Display profit estimates
+# st.write(f"### Profit Estimates for ₦{cash_available}:")
+# for label, (low, high, charge) in withdrawal_ranges.items():
+#     avg_withdrawal = (low + high) // 2  # Approximate average withdrawal amount
+#     num_transactions = cash_available // avg_withdrawal
+#     profit = num_transactions * charge
+#     st.write(f"**{label}**: {num_transactions} transactions → Profit: **₦{profit}**")
+
 # Display profit estimates
 st.write(f"### Profit Estimates for ₦{cash_available}:")
 for label, (low, high, charge) in withdrawal_ranges.items():
-    # Calculate max and min number of transactions possible
+    # Calculate avg, max and min number of transactions possible
+    avg_withdrawal = (low + high) // 2  # Approximate average withdrawal amount
     max_transactions = cash_available // low  # If all transactions are at the lowest value
     min_transactions = cash_available // high  # If all transactions are at the highest value
+    avg_transactions = cash_available // avg_withdrawal
 
     # Calculate profit based on possible scenarios
+    avg_profit = avg_transactions * charge
     max_profit = max_transactions * charge
     min_profit = min_transactions * charge
 
     # Display results
     st.write(f"**{label}**")
     st.write(f"**Max Profit (if all withdrawals are ₦{low})**: ₦{max_profit} ({max_transactions} transactions)")
+    st.write(f"**Average Profit**: {avg_transactions} transactions → Profit: **₦{avg_profit}**")
     st.write(f"**Min Profit (if all withdrawals are ₦{high})**: ₦{min_profit} ({min_transactions} transactions)")
     st.write("---")
