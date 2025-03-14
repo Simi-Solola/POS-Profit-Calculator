@@ -8,6 +8,9 @@ The **POS Profit Calculator** is a Streamlit web application that helps business
 ✅ **User-Friendly Interface** powered by **Streamlit**  
 ✅ **Deployment Ready** with a web-based interface  
 
+## Live Demo  
+🔗 **Try the app here:** [POS Profit Calculator](https://pos-profit-calculator.streamlit.app/)
+
 ## Future Plans  
 I plan to enhance the **POS Profit Calculator** by incorporating **machine learning models** to provide more accurate profit estimations for business owners. The key improvements include:  
 
